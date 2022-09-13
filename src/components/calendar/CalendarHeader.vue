@@ -72,6 +72,7 @@
             flex: 1;
             font-size: 16px;
             font-weight: 500;
+            color: #000;
         }
         .view-control-area {
             display: flex;

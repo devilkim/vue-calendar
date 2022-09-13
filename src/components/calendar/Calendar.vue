@@ -14,18 +14,10 @@
         <CalendarMonth 
             :currentDate="currentDate"
             :isWeekend="isWeekend"
+            :taskList="processList"
         />
     </div>
 </template>
-<style lang="scss" scoped>  
-    .frame {
-        width: 100%;
-        height: 100%;    
-        padding: 10px;
-        margin: 0;
-        box-sizing: border-box;
-    }  
-</style>
 <script>    
     export default {
         data() {
@@ -33,6 +25,11 @@
                 currentDate: new Date(),
                 viewMode: "month", // month, week, day
                 isWeekend: true,
+                processList: [
+                    {startDate: '2022-09-01', endDate: '2022-09-10', name: 'A'},
+                    {startDate: '2022-09-11', endDate: '2022-09-15', name: 'B'},
+                    {startDate: '2022-09-16', endDate: '2022-09-20', name: 'C'},
+                ]
             }
         },
         methods: {
@@ -77,3 +74,12 @@
         }
     }
 </script>
+<style lang="scss" scoped>  
+    .frame {
+        width: 100%;
+        height: 100%;    
+        padding: 10px;
+        margin: 0;
+        box-sizing: border-box;
+    }  
+</style>

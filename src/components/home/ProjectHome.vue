@@ -1,5 +1,9 @@
 <template>  
-  <div class='page'>
+  <div style="width:100%; height: 720px">
+    <Calendar />
+  </div>
+  
+  <!-- <div class='page'>
     <div class='header flex'>      
       <div class='left'>
         <el-icon><LocationFilled /></el-icon>      
@@ -81,7 +85,7 @@
         pagination
       </div>
     </div>
-  </div>  
+  </div>   -->
 </template>
 
 <style lang='scss' scoped>

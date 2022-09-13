@@ -1,5 +1,6 @@
+const MONTH_UNIT_COUNT = 42
 
-function createMonthUnits(currentDate) {
+function createMonthUnits(currentDate, taskList) {
     const nextMonthDate = new Date(currentDate)
     nextMonthDate.setMonth(nextMonthDate.getMonth() + 1)
     
@@ -18,7 +19,11 @@ function createMonthUnits(currentDate) {
     }
 
     const monthUnits = []
-    for (let i = 1; i <= 42; i++) {                
+    const indexDatetime = new Date(
+        
+
+        )
+    for (let i = 1; i <= MONTH_UNIT_COUNT; i++) {                
         if (monthType == 'last' && indexDate > prevLastDate) {
             indexDate = 1
             monthType = 'current'
@@ -26,16 +31,12 @@ function createMonthUnits(currentDate) {
             indexDate = 1
             monthType = 'next'
         }
-
-        monthUnits.push({no: i, monthType, date: indexDate++,})
-    }
-    
-    
-    // console.log(prevLastDate)
-    // console.log(currentLastDate)
-    // console.log(currentFirstDay)
-         
-    
+        monthUnits.push({
+            no: i, 
+            monthType, 
+            date: indexDate++, 
+        })
+    }    
     return monthUnits
 }
 
