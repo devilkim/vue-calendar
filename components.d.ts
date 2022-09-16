@@ -14,6 +14,7 @@ declare module '@vue/runtime-core' {
     CalendarHeader: typeof import('./src/components/calendar/CalendarHeader.vue')['default']
     CalendarMonth: typeof import('./src/components/calendar/CalendarMonth.vue')['default']
     CalendarMonthUnit: typeof import('./src/components/calendar/CalendarMonthUnit.vue')['default']
+    CalendarMonthUnitExpand: typeof import('./src/components/calendar/CalendarMonthUnitExpand.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElOption: typeof import('element-plus/es')['ElOption']

@@ -1,5 +1,5 @@
 <template>  
-  <div style="width:100%; height: 720px">
+  <div style="width:800px; height: 1000px; background-color: white;" >
     <Calendar />
   </div>
   

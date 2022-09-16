@@ -43,7 +43,6 @@
     $frame-border: 1px solid #d7d7d7;
     $day-label-font-size: 12px;
     $height-except-calendar: 60px;
-    
 
     .label-area {
         display: flex;
@@ -57,14 +56,12 @@
             color: #000;
         }
     }
-
     .calendar-area {
         border: $frame-border;   
         border-top: none;
         display: grid;
         box-sizing: border-box;
         height: calc(100% - $height-except-calendar);
-            
     }
     .calendar-area-weekend {
         @extend .calendar-area;

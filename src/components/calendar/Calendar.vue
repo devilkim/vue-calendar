@@ -26,9 +26,15 @@
                 viewMode: "month", // month, week, day
                 isWeekend: true,
                 processList: [
-                    {startDate: '2022-09-01', endDate: '2022-09-10', name: 'A'},
-                    {startDate: '2022-09-11', endDate: '2022-09-15', name: 'B'},
-                    {startDate: '2022-09-16', endDate: '2022-09-20', name: 'C'},
+                    {id: 1, startDate: '2022-09-01', endDate: '2022-09-10', name: 'A'},
+                    {id: 2, startDate: '2022-09-11', endDate: '2022-09-15', name: 'B'},
+                    {id: 3, startDate: '2022-09-16', endDate: '2022-09-20', name: 'C'},
+                    {id: 4, startDate: '2022-09-23', endDate: '2022-09-23', name: 'DDD'},
+                    {id: 5, startDate: '2022-09-01', endDate: '2022-09-10', name: 'A1'},
+                    {id: 6, startDate: '2022-09-01', endDate: '2022-09-10', name: 'A2'},
+                    {id: 7, startDate: '2022-09-01', endDate: '2022-09-10', name: 'A3'},
+                    {id: 8, startDate: '2022-09-01', endDate: '2022-09-10', name: 'A4'},
+
                 ]
             }
         },
@@ -75,7 +81,7 @@
     }
 </script>
 <style lang="scss" scoped>  
-    .frame {
+    .frame {        
         width: 100%;
         height: 100%;    
         padding: 10px;
