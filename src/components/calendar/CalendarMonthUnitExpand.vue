@@ -2,28 +2,38 @@
     <div class="expand-area">
         <div class="head">
             <div class="title">
-                2020.12.02
+                {{title}}
             </div>
-            <div class="close">
+            <div class="close" @click="onClickClose">
                 Χ
             </div>
         </div>
         <div class="body">
-            <div>프로세스 명 1</div>
-            <div>프로세스 명 2</div>
-            <div>프로세스 명 3</div>
-            <div>프로세스 명 4</div>
-            <div>프로세스 명 5</div>
-            <div>프로세스 명 6</div>
-            <div>프로세스 명 8</div>
-            <div>프로세스 명 9</div>
-            <div>프로세스 명 10</div>
-            <div>프로세스 명 11</div>
-            <div>프로세스 명 12</div>
-            <div>프로세스 명 13</div>
+            <div v-for="task in filteredTaskList" :style="{backgroundColor: task.color}">{{task.name}}</div>
         </div>
     </div>
 </template>
+<script>
+    export default {
+        props: {
+            currentDate: String,            
+            taskList: Array,
+        },
+        computed: {
+            title() {
+                return this.currentDate.replace(/-/gi, '.')
+            },
+            filteredTaskList() {
+                return this.taskList.filter(item => item.status !== 'empty')
+            },
+        },
+        methods: {
+            onClickClose: function() {
+                
+            }
+        }
+    }  
+</script>
 <style lang="scss" scoped>
     $frame-border: 1px solid #d7d7d7;
     .expand-area {
@@ -51,8 +61,7 @@
             padding: 2px;
             div {
                 font-size: 12px;
-                color: #ffffff;
-                background-color: red;
+                color: #ffffff;                
                 margin: 2px;
                 padding: 0 2px;
                 border-radius: 4px;

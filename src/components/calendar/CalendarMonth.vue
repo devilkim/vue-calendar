@@ -13,7 +13,13 @@
             isWeekend ? 'calendar-area-weekend' : 'calendar-area-no-weekend'
         ]"
     >
-        <CalendarMonthUnit v-for="unit in monthUnits" :unit="unit" :isWeekend="isWeekend"  />
+        <CalendarMonthUnit 
+            v-for="unit in monthUnits" 
+            :unit="unit" 
+            :isWeekend="isWeekend"  
+            :isExpand="this.expandDate === unit.fulldate"
+            @onHandleMore="onHandleMore"
+            />
     </div>
 </template>
 <script>
@@ -26,7 +32,8 @@
         },        
         data() {
             return {
-                monthUnits: [],             
+                monthUnits: [],
+                expandDate: null,
             }
         },
         mounted() {            
@@ -36,6 +43,11 @@
             currentDate() {                         
                 this.monthUnits = createMonthUnits(this.currentDate, this.taskList)                
             }
+        },
+        methods: {
+            onHandleMore: function(unit) {                
+                this.expandDate = unit.fulldate
+            },
         }
     }
 </script>
